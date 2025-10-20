@@ -42,7 +42,7 @@ The SmartBin hardware was assembled with:
 
 The system continuously monitors incoming waste. If a bin reaches a critical level (less than 15 cm free space), the servo will **not accept more waste**, and the app receives a **notification**.
 
-![Hardware Setup](link-to-your-hardware-image)
+![Hardware Setup](https://github.com/aswinR-0210/SmartBIn/blob/main/circuit.jpg)
 
 ---
 
