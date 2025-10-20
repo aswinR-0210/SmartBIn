@@ -63,7 +63,7 @@ The system continuously monitors incoming waste. If a bin reaches a critical lev
 - If the distance to waste surface is less than **15 cm**, the system stops accepting waste and sends a **notification to the Flutter app**.  
 - Once space is available again, the system resumes operation.
 
-![Bin Level Monitoring](link-to-your-bin-image)
+![Bin Level Monitoring](https://github.com/aswinR-0210/SmartBIn/blob/main/binlevel.jpg)
 
 ---
 ### 4.GPS Location Tracking
