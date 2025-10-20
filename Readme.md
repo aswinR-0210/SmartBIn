@@ -3,6 +3,8 @@
 ## Objective
 The goal of this project was to design and develop a **smart waste management system** using **ESP32 and IoT technology**. SmartBin detects **wet and dry waste**, monitors bin levels using **ultrasonic sensors**, and segregates waste automatically with a **servo motor**. Data is sent to a **Flutter-based mobile app** and **Firebase**, providing real-time monitoring and notifications. This project combines embedded systems, IoT, and cloud integration to improve waste collection efficiency.
 
+![Design](https://github.com/aswinR-0210/SmartBIn/blob/main/smartBin.png)
+
 ---
 
 ### Skills Learned
