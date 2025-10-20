@@ -10,7 +10,8 @@ The goal of this project was to design and develop a **smart waste management sy
 - Programming ESP32 for **sensor integration and IoT applications**.  
 - Implementing **non-contact waste classification** using a rainwater/soil moisture sensor.  
 - Controlling **servo motors** for waste segregation.  
-- Monitoring **bin levels** with ultrasonic sensors.  
+- Monitoring **bin levels** with ultrasonic sensors.
+- Reading and processing **GPS data** from the NEO-6M module 
 - Integrating **Firebase Realtime Database** for long-term data storage.  
 - Debugging IoT systems combining multiple sensors and cloud communication.  
 
@@ -21,10 +22,11 @@ The goal of this project was to design and develop a **smart waste management sy
 - **ESP32** — main controller for sensors, motor, and cloud integration.  
 - **Ultrasonic Sensors (3)** — front (incoming waste), wet bin, dry bin.  
 - **Rainwater/Soil Moisture Sensor** — classifies wet or dry waste.  
-- **SG90 Servo Motor** — actuates waste segregation mechanism.  
+- **SG90 Servo Motor** — actuates waste segregation mechanism.
+- **NEO-6M GPS module** — provides latitude and longitude coordinates.  
 - **Firebase Realtime Database** — stores key messages like bin status.  
 - **Flutter Mobile App** — real-time monitoring of SmartBin.  
-- **NodeMCU / ESP32 IDE** — programming and uploading code.  
+- **Arduino IDE** — programming and uploading code.  
 
 ---
 
@@ -34,7 +36,8 @@ The goal of this project was to design and develop a **smart waste management sy
 The SmartBin hardware was assembled with:  
 - Three **ultrasonic sensors** for waste detection and bin-level monitoring  
 - **Rainwater/soil moisture sensor** for waste classification  
-- **Servo motor** for waste segregation  
+- **Servo motor** for waste segregation
+- **NEO-6M GPS module** — provides latitude and longitude coordinates. 
 - **ESP32 controller** for processing and cloud integration  
 
 The system continuously monitors incoming waste. If a bin reaches a critical level (less than 15 cm free space), the servo will **not accept more waste**, and the app receives a **notification**.
@@ -63,25 +66,39 @@ The system continuously monitors incoming waste. If a bin reaches a critical lev
 ![Bin Level Monitoring](link-to-your-bin-image)
 
 ---
-
-### 4. Cloud Integration
-- **Flutter App**: receives real-time bin status and waste classification updates.  
-- **Firebase Realtime Database**: stores important events like "Bin Full" status for historical access.  
-- HTTP requests are used for real-time ESP32-to-app communication.  
+### 4.GPS Location Tracking
+- The **NEO-6M GPS module** connected to ESP32 sends **latitude and longitude** readings.  
+- The location is updated to Firebase **every 1 hour**.  
+- This allows tracking each SmartBin’s location through the **Flutter app**.  
 
 ---
 
-### 5. Servo Motor Operation
+### 5. Cloud Integration
+- **Firebase Realtime Database** stores:
+  - Wet/Dry bin levels  
+  - Waste type  
+  - GPS location and timestamps  
+- **HTTP communication** is used between ESP32 and Firebase.  
+- The **Flutter mobile app** reads data in real-time and shows:
+  - Bin level percentage  
+  - Bin full alerts  
+  - Last updated GPS location 
+
+
+---
+
+### 6. Servo Motor Operation
 - Servo rotates left or right depending on the **waste type** detected.  
 - After waste is deposited, the servo returns to the **center position** ready for the next operation.  
 
 ---
 
-### 6. Notifications and App Monitoring
+### 7. Notifications and App Monitoring
 - **Bin full notifications** are sent to the Flutter app when either wet or dry bin is full.  
-- **Real-time data updates** allow users to monitor bin levels remotely.  
+- **Real-time data updates** allow users to monitor bin levels remotely.
+- Last known location of the bin. 
 
 ---
 
-### 7. Conclusion
+### 8. Conclusion
 SmartBin demonstrates a **complete IoT waste management solution** combining sensors, cloud integration, and automation. It improves efficiency in waste segregation and collection, while reinforcing skills in **embedded systems, IoT communication, cloud databases, and mobile app integration**.
