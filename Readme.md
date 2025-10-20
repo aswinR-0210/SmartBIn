@@ -55,7 +55,7 @@ The system continuously monitors incoming waste. If a bin reaches a critical lev
   - **Wet waste → wet bin**  
   - **Dry waste → dry bin**  
 
-![testing](https://github.com/aswinR-0210/SmartBIn/blob/main/binlevel.jpg)
+![testing](https://github.com/aswinR-0210/SmartBIn/blob/main/test.jpeg)
 ---
 
 ### 3. Bin Level Monitoring
