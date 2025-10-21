@@ -7,11 +7,11 @@
 #include "addons/RTDBHelper.h"
 
 // ----------------- WIFI CREDENTIALS -----------------
-#define WIFI_SSID "Area51"
-#define WIFI_PASSWORD "Pass@Turb0VPN"
+#define WIFI_SSID "ssid"
+#define WIFI_PASSWORD "Password"
 
 // ----------------- FIREBASE CREDENTIALS -----------------
-#define API_KEY "AIzaSyAR5lXOD6Of1kRf0FzrLVErW6dYVBaVpDI"
+#define API_KEY "*****************"
 #define DATABASE_URL "https://smartbin-1818-default-rtdb.asiasoutheast1.firebasedatabase.app/"
 
 // ----------------- FIREBASE OBJECTS -----------------
